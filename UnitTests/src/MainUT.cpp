@@ -3,7 +3,7 @@
 
 int main()
 {
-    testing::InitGoogleTest(&argc, argv);
+    testing::InitGoogleTest();
 	auto result = RUN_ALL_TESTS();
 
     return 0;

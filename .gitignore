@@ -31,6 +31,5 @@
 *.out
 *.app
 
-Externals/*
 .vscode
 build
