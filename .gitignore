@@ -33,3 +33,5 @@
 
 .vscode
 build
+Externals/ASIO/asio.hpp
+Externals/ASIO/asio

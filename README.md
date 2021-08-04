@@ -15,8 +15,17 @@ Technologies used in the project:
 * GoogleTest
 	
 ## Setup
-To run this project, download repository and execute commands:
+To run the project, please go through the following steps:
 
+### Download ASIO library
+```
+Donwload library from: https://think-async.com/Asio/
+Unpack and copy to the directory Externals/ASIO following elements:
+asio-<version>/include/asio.hpp
+asio-<version>/include/asio
+```
+
+### Setup googletest
 ```
 $ git submodule init
 $ git submodule update
