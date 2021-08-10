@@ -8,9 +8,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 add_executable(${PROJECT_NAME} 
     src/main.cpp
     src/initRepo.cpp
+    src/AsioServer.cpp
 )
 
 #target_link_libraries(${PROJECT_NAME} ws2_32)
 
 target_include_directories(${PROJECT_NAME} PUBLIC 
-    ${CMAKE_SOURCE_DIR}/Externals/ASIO)
+    ${CMAKE_SOURCE_DIR}/Externals/ASIO
+    ${PROJECT_SOURCE_DIR}/include
+)
