@@ -1,5 +1,6 @@
 #pragma once
 #include <thread>
+#include <vector>
 #include "IServer.h"
 #include "asio.hpp"
 
@@ -14,6 +15,7 @@ private:
     asio::ip::tcp::acceptor acceptor;
     std::thread threadContext;
     bool isServerRunning;
+
     void listening();
     static void connectionAttempt(std::error_code ec, asio::ip::tcp::socket socket);
 };

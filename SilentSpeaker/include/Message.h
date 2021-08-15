@@ -1,6 +1,5 @@
 #pragma once
 #include <vector>
-#include <cstddef>
 #include <cstdint>
 #include <string>
 
@@ -14,9 +13,11 @@ class Message
 public:
     Message(MessageHeader header);
     size_t getSize() const;
-    void append(const std::vector<std::byte>& data);
+    void append(const std::vector<uint8_t>& data);
     void append(const std::string& data);
+    //FUTURE IMPROVMENT - RETURN REFERENCE, DO NOT EXTRA COPY
+    std::string readMessage(size_t sizeToRead = 0) const;
 private:
     MessageHeader header;
-    std::vector<std::byte> body;
+    std::vector<uint8_t> body;
 };

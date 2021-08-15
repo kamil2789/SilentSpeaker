@@ -11,7 +11,8 @@ add_executable(${PROJECT_NAME}
     src/AsioServer.cpp
 )
 
-#target_link_libraries(${PROJECT_NAME} ws2_32)
+target_link_libraries(${PROJECT_NAME} ws2_32)
+target_link_libraries(${PROJECT_NAME} wsock32)
 
 target_include_directories(${PROJECT_NAME} PUBLIC 
     ${CMAKE_SOURCE_DIR}/Externals/ASIO

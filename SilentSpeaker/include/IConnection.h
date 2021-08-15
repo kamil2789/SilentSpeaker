@@ -2,5 +2,6 @@
 
 class IConnection
 {
-
+public:
+    void connect()
 };

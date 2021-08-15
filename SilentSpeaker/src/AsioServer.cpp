@@ -3,9 +3,7 @@
 
 AsioServer::AsioServer(uint16_t port):
     acceptor(context, asio::ip::tcp::endpoint(asio::ip::tcp::v4(), port))
-{
-
-}
+{}
 
 bool AsioServer::start()
 {
@@ -41,6 +39,7 @@ void AsioServer::connectionAttempt(std::error_code ec, asio::ip::tcp::socket soc
 	if (!ec)
 	{
 		std::cout << "Server: new connection from: " << socket.remote_endpoint() << std::endl;
+		
 	}
 }
 
